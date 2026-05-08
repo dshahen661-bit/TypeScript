@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Leyout from './pages/Leyout.tsx'
 import Shop from './pages/Shop.tsx'
 import About from './pages/About.tsx'
+import SinglePage from './components/SinglePage.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')!).render(
       <Route path='/' element={<Leyout />}>
         <Route index element={<App />} />
         <Route path='/shop' element={<Shop />} />
+        <Route path='/shop/:id' element={<SinglePage />} />
         <Route path='/about' element={<About />} />
       </Route>
     </Routes>
